@@ -4,12 +4,12 @@ from Flame.main import call_py, bot, BOT
 
 async def start_bot():
     print("[INFO]: STARTING BOT CLIENT")
-    bot.start()
+    await bot.start()
     print("[INFO]: STARTING PYTGCALLSS CLIENT")
-    call_py.start()
+    await call_py.start()
     await idle()
     print("[INFO]: STOPPING BOT & USERBOT")
-    bot.stop()
+    await bot.stop()
 
 
 loop = asyncio.get_event_loop()
