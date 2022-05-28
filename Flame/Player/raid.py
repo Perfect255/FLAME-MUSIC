@@ -20,7 +20,7 @@ async def spam(e):
     if e.sender_id in SUDO_USERS:
         if e.text[0].isalpha() and e.text[0] in ("/", "#", "@", "!"):
             return await e.reply(usage, parse_mode=None, link_preview=None )
-        Deadly = ("".join(e.sticker.split(maxsplit=1)[1:])).split(" ", 1)
+        Deadly = ("".join(e.sticker_id.split(maxsplit=1)[1:])).split(" ", 1)
         bitxh = await e.get_reply_message()
         if len(Deadly) == 2:
             user = str(Deadly[1])
