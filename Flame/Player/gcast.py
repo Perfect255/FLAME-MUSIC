@@ -1,6 +1,7 @@
 from pyrogram import filters
 from pyrogram.errors import UserAlreadyParticipant
 import asyncio
+from pyrogram.types import Dialog, Chat, Message
 from config import SUDO_USERS
 from Flame.main import Test, bot as Client
 
