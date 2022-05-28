@@ -5,7 +5,7 @@ from config import SUDO_USERS
 from Flame.main import Test, bot as Client
 
 @Client.on_message(filters.command(["gcast", "post", "send"]))
-async def broadcast(_, message: Message):
+async def broadcast(client, message):
     sent=0
     failed=0
     if message.from_user.id not in SUDO_USERS:
