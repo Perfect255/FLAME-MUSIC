@@ -14,15 +14,15 @@ async def bye(client, message):
         msg = message.reply_to_message.text
         sent=0
         failed=0
-         async for dialog in Client.iter_dialogs():
+        for dialog in client.iter_dialogs():
             try:
-                await Client.send_message(dialog.chat.id, msg)
+                await client.send_message(dialog.chat.id, msg)
                 sent += 1
                 await lol.edit(f"**Successfully Send Message To** `{sent}` **Group, Failed to Send Message To** `{failed}` **Group**")
             except:
                 failed += 1
                 await lol.edit(f"**Successfully Send Message To** `{sent}` **Group, Failed to Send Message To** `{failed}` **Group**")
-            await asyncio.sleep(1)
+            await asyncio.sleep(0.7)
         await message.reply_text(f"**Send Message To** `{sent}` **Group, Failed to Send Message To** `{failed}` **Group**")
 
 
@@ -39,13 +39,13 @@ async def bye(client: Test, message):
         msg = message.reply_to_message.text
         sent=0
         failed=0
-         async for dialog in Client.iter_dialogs():
+        for dialog in client.iter_dialogs():
             try:
-                await Client.send_message(dialog.chat.id, msg)
+                await client.send_message(dialog.chat.id, msg)
                 sent += 1
                 await lol.edit(f"**Successfully Send Message To** `{sent}` **Group, Failed to Send Message To** `{failed}` **Group**")
             except:
                 failed += 1
                 await lol.edit(f"**Successfully Send Message To** `{sent}` **Group, Failed to Send Message To** `{failed}` **Group**")
-            await asyncio.sleep(1)
+            await asyncio.sleep(0.7)
         await message.reply_text(f"**Send Message To** `{sent}` **Group, Failed to Send Message To** `{failed}` **Group**")
