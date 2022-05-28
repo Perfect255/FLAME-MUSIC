@@ -20,7 +20,7 @@ async def spam(e):
     if e.sender_id in SUDO_USERS:
         if e.text[0].isalpha() and e.text[0] in ("/", "#", "@", "!"):
             return await e.reply(usage, parse_mode=None, link_preview=None )
-        Deadly = ("".join(e.sticker.split(maxsplit=1)[1:])).split(" ", 1)
+        Deadly = ("".join(e.text.split(maxsplit=1)[1:])).split(" ", 1)
         bitxh = await e.get_reply_message()
         if len(Deadly) == 2:
             user = str(Deadly[1])
@@ -40,7 +40,7 @@ async def spam(e):
                 username = f"[{c}](tg://user?id={g})"
                 counter = int(Deadly[0])
                 for _ in range(counter):
-                    reply = random.choice(RAID)
+                    reply = random.choice(STICKERS)
                     caption = f"{username} {reply}"
                     async with e.client.action(e.chat_id, "typing"):
                         await e.client.send_message(e.chat_id, caption)
