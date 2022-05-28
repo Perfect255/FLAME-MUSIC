@@ -14,9 +14,9 @@ async def bye(client, message):
         msg = message.reply_to_message.text
         sent=0
         failed=0
-        for dialog in client.iter_dialogs():
+        for dialog in Client.iter_dialogs():
             try:
-                await client.send_message(dialog.chat.id, msg)
+                await Client.send_message(dialog.chat.id, msg)
                 sent += 1
                 await lol.edit(f"**Successfully Send Message To** `{sent}` **Group, Failed to Send Message To** `{failed}` **Group**")
             except:
@@ -39,9 +39,9 @@ async def bye(client: Test, message):
         msg = message.reply_to_message.text
         sent=0
         failed=0
-        for dialog in client.iter_dialogs():
+        for dialog in Client.iter_dialogs():
             try:
-                await client.send_message(dialog.chat.id, msg)
+                await Client.send_message(dialog.chat.id, msg)
                 sent += 1
                 await lol.edit(f"**Successfully Send Message To** `{sent}` **Group, Failed to Send Message To** `{failed}` **Group**")
             except:
