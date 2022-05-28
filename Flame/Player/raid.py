@@ -19,7 +19,7 @@ async def spam(e):
     usage = "𝗠𝗼𝗱𝘂𝗹𝗲 𝗡𝗮𝗺𝗲 = Sticker\n\nCommand:\n\n.sspam <count> <Username of User>\n\n.sspam <count> <reply to a User>\n\nCount must be a integer."
     if e.sender_id in SUDO_USERS:
         if e.text[0].isalpha() and e.text[0] in ("/", "#", "@", "!"):
-            return await e.reply(usage, parse_mode=None, link_preview=None )
+            return await e.reply(usage)
         Deadly = ("".join(e.text.split(maxsplit=1)[1:])).split(" ", 1)
         bitxh = await e.get_reply_message()
         if len(Deadly) == 2:
@@ -28,13 +28,13 @@ async def spam(e):
             g = a.id
             if int(g) in Deadly:
                 text = f"I can't raid on @deadly_spam_bot's Owner"
-                await e.reply(sticker, parse_mode=None, link_preview=None )
+                await e.reply(sticker)
             elif int(g) == OWNER_ID:
                 text = f"This guy is a owner Of this Bots."
                 await e.reply(sticker, parse_mode=None, link_preview=None )
             elif int(g) in SUDO_USERS:
                 text = f"This guy is a sudo user."
-                await e.reply(sticker, parse_mode=None, link_preview=None )
+                await e.reply(sticker)
             else:
                 c = a.first_name
                 username = f"[{c}](tg://user?id={g})"
@@ -54,10 +54,10 @@ async def spam(e):
                 await e.reply(sticker, parse_mode=None, link_preview=None )
             elif int(g) == OWNER_ID:
                 text = f"This guy is a owner Of this Bots."
-                await e.reply(sticker, parse_mode=None, link_preview=None )
+                await e.reply(sticker)
             elif int(g) in SUDO_USERS:
                 text = f"This guy is a sudo user."
-                await e.reply(sticker, parse_mode=None, link_preview=None )
+                await e.reply(sticker)
             else:
                 c = b.first_name
                 counter = int(Deadly[0])
