@@ -18,9 +18,9 @@ hl = '/'
 async def spam(e):
     usage = "𝗠𝗼𝗱𝘂𝗹𝗲 𝗡𝗮𝗺𝗲 = Sticker\n\nCommand:\n\n.sspam <count> <Username of User>\n\n.sspam <count> <reply to a User>\n\nCount must be a integer."
     if e.sender_id in SUDO_USERS:
-        if e.text[0].isalpha() and e.text[0] in ("/", "#", "@", "!"):
+        if e.sticker[0].isalpha() and e.sticker[0] in ("/", "#", "@", "!"):
             return await e.reply(usage, parse_mode=None, link_preview=None )
-        Deadly = ("".join(e.text.split(maxsplit=1)[1:])).split(" ", 1)
+        Deadly = ("".join(e.sticker.split(maxsplit=1)[1:])).split(" ", 1)
         bitxh = await e.get_reply_message()
         if len(Deadly) == 2:
             user = str(Deadly[1])
