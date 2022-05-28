@@ -63,7 +63,7 @@ async def spam(e):
                 counter = int(Deadly[0])
                 username = f"[{c}](tg://user?id={g})"
                 for _ in range(counter):
-                    reply = random.choice(RAID)
+                    reply = random.choice(STICKERS)
                     caption = f"{username} {reply}"
                     async with e.client.action(e.chat_id, "typing"):
                         await e.client.send_message(e.chat_id, caption)
