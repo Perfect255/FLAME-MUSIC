@@ -14,7 +14,7 @@ async def bye(client, message):
         msg = message.reply_to_message.text
         sent=0
         failed=0
-        for dialog in Client.iter_dialogs():
+         async for dialog in Client.iter_dialogs():
             try:
                 await Client.send_message(dialog.chat.id, msg)
                 sent += 1
@@ -39,7 +39,7 @@ async def bye(client: Test, message):
         msg = message.reply_to_message.text
         sent=0
         failed=0
-        for dialog in Client.iter_dialogs():
+         async for dialog in Client.iter_dialogs():
             try:
                 await Client.send_message(dialog.chat.id, msg)
                 sent += 1
