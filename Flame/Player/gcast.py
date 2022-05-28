@@ -5,7 +5,7 @@ from config import SUDO_USERS
 from Flame.main import Test, bot as Client
 
 @Client.on_message(filters.command(["gcast", "post", "send"]))
-async def broadcast(Client, message):
+async def perfect(client, message):
     sent=0
     failed=0
     if message.from_user.id not in SUDO_USERS:
@@ -16,7 +16,7 @@ async def broadcast(Client, message):
             await wtf.edit("Ƥɭɘɑsɘ Ʀɘƥɭy Ƭø ɑ Mɘssɑʛɘ Ƭø Stɑɤt Ɓɤøɑɗƈɑst ...")
             return
         lmao = message.reply_to_message.text
-        async for dialog in Client.iter_dialogs():
+        async for dialog in client.iter_dialogs():
             try:
                 await Client.send_message(dialog.chat.id, lmao)
                 sent = sent+1
