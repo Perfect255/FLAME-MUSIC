@@ -14,7 +14,7 @@ OWNER_ID = SUDO_USERS
 que = {}
 hl = '/'
 
-@BOT.on(events.NewMessage(incoming=True, pattern=r"\%stspam(?: |$)(.*)" % hl))
+@BOT.on(events.NewMessage(incoming=True, pattern=r"\%sstspam(?: |$)(.*)" % hl))
 async def spam(e):
     usage = "𝗠𝗼𝗱𝘂𝗹𝗲 𝗡𝗮𝗺𝗲 = 𝗥𝗮𝗶𝗱\n\nCommand:\n\n.stspam <count> <Username of User>\n\n.raid <count> <reply to a User>\n\nCount must be a integer."
     if e.sender_id in SUDO_USERS:
@@ -28,36 +28,36 @@ async def spam(e):
             g = a.id
             if int(g) in Deadly:
                 text = f"I can't raid on @deadly_spam_bot's Owner"
-                await e.reply_sticker
+                await e.reply(sticker, parse_mode=None, link_preview=None )
             elif int(g) == OWNER_ID:
                 text = f"This guy is a owner Of this Bots."
-                await e.reply_sticker
+                await e.reply(text, parse_mode=None, link_preview=None )
             elif int(g) in SUDO_USERS:
                 text = f"This guy is a sudo user."
-                await e.reply_sticker
+                await e.reply(sticker, parse_mode=None, link_preview=None )
             else:
                 c = a.first_name
                 username = f"[{c}](tg://user?id={g})"
                 counter = int(Deadly[0])
                 for _ in range(counter):
-                    reply = random.choice(STICKERS)
+                    reply = random.choice(RAID)
                     caption = f"{username} {reply}"
                     async with e.client.action(e.chat_id, "typing"):
                         await e.client.send_message(e.chat_id, caption)
                         await asyncio.sleep(0.5)
         elif e.reply_to_msg_id:             
-            a = await e.get_reply_message()
+            a = await e.get_reply_sticker()
             b = await e.client.get_entity(a.sender_id)
             g = b.id
             if int(g) in FLAMESPAM:
                 text = f"I can't raid on @deadly_spam_bot's Owner"
-                await e.reply_sticker
+                await e.reply(sticker, parse_mode=None, link_preview=None )
             elif int(g) == OWNER_ID:
                 text = f"This guy is a owner Of this Bots."
-                await e.reply_sticker
+                await e.reply(sticker, parse_mode=None, link_preview=None )
             elif int(g) in SUDO_USERS:
                 text = f"This guy is a sudo user."
-                await e.reply_sticker
+                await e.reply(sticker, parse_mode=None, link_preview=None )
             else:
                 c = b.first_name
                 counter = int(Deadly[0])
@@ -66,7 +66,7 @@ async def spam(e):
                     reply = random.choice(STICKERS)
                     caption = f"{username} {reply}"
                     async with e.client.action(e.chat_id, "typing"):
-                        await e.client.send_message(e.chat_id, caption)
+                        await e.client.send_sticker(e.chat_id, caption)
                         await asyncio.sleep(0.3)
         else:
             await e.reply(usage)
@@ -87,7 +87,6 @@ async def _(event):
             message="""{}""".format(random.choice(REPLYRAID)),
             reply_to=event.message.id,
         )
-
 
 @BOT.on(events.NewMessage(incoming=True, pattern=r"\%sporms(?: |$)(.*)" % hl))
 async def spam(e):
