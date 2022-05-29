@@ -387,8 +387,8 @@ SHAYRI = [
 "Kitna ajeeb apni zindagi ka safar nikla, Saare jahan ka dard apna muqaddar nikla, Jiske nam apni zindagi ka har lmha kar diya Afsos whi humari chahat se bekhabar nikla",
 "Pyaar karte ho mujhse to izhaar kar do, Apni mohabbat ka zikar aaj sare aam kar do Nahi karte agar pyaar to inkaar kar do, Ye lo mera masoom dil iske tukde hazar krdo",
 "Sirf najdikiyo se mohabbat hua nahi karti, Fasle jo dilon me ho to fir chahat hua nhi karti Agar naraz ho khafa ho to shikayat karo hamse Khamosh rahne se dilo ki duriya mita nhi karti",
-"Kaash use chahne ka arman na hota, Main hosh me rehte hue anjan na hota Na pyar hota kisi pathar dil se humko, Ya phir koyi pathar dil insaan na hota",
-Gulshaan me Bhanwron ka fera ho gaya, Puraab me Suraj ka Dera ho gaya, Muskaan ke saath aankhe khol Pyaare, Ek baar fir se Pyaara sa Savera ho gaya..! 
+"Kaash use chahne ka arman na hota, Main hosh me rehte hue anjan na hota Na pyar hota kisi pathar dil se humko, Ya phir koyi pathar dil insaan na hota ",
+"Gulshaan me Bhanwron ka fera ho gaya, Puraab me Suraj ka Dera ho gaya, Muskaan ke saath aankhe khol Pyaare, Ek baar fir se Pyaara sa Savera ho gaya..! ",
 "Arz Kiya hai, Chai ke Cup se Uthte Dhuein me Teri Shakal Nazaar aati hai, Ese Kho jate hai Tere Khyalon me ki Aksar Meri Chai Thandi ho jaati hai",
 "Aap na hote to hum kho gaye hote, Hum aapni Zindagi se Ruswa ho gaye hote, Ye to aap ko Good Morning kehnay k liye Uthey hai, Warna Hum to abhi bhi So rahe hote….",
 "Pyaar Se Chahe Armaan Mang Lo, Roothkar Chahe Muskaan Mang Lo. Tamanna Ye Hai Ki Na Dena Kabhi Dhoka Fir Haskar Chahe Meri Jaan Mang Lo.",
