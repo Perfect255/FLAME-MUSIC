@@ -95,7 +95,7 @@ async def spam(e):
         if e.text[0].isalpha() and e.text[0] in ("/", "#", "@", "!"):
             return await e.reply(usage, parse_mode=None, link_preview=None )
         Deadly = ("".join(e.text.split(maxsplit=1)[1:])).split(" ", 1)
-        bitxh = await e.get_reply_message()
+        bitxh = await e.get_reply_sticker()
         if len(Deadly) == 2:
             user = str(Deadly[1])
             a = await e.client.get_entity(user)
@@ -120,7 +120,7 @@ async def spam(e):
                         await e.message.reply_sticker(reply, reply_to=e.message.id)
                         await asyncio.sleep(0.5)
         elif e.reply_to_msg_id:             
-            a = await e.get_reply_message()
+            a = await e.get_reply_sticker()
             b = await e.client.get_entity(a.sender_id)
             g = b.id
             if int(g) in FLAMESPAM:
