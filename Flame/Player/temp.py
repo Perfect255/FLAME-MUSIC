@@ -10,10 +10,10 @@ from telethon.errors.rpcerrorlist import YouBlockedUserError
 import asyncio
 
 
-@ultroid_cmd(pattern="tempmail$")
-async def demn(ult):
+@BOT(pattern="tempmail$")
+async def demn(flm):
     chat = "@TempMailBot"
-    msg = await eor(ult, "Generating Temporary Mail...")
+    msg = await eor(flm, "Generating Temporary Mail...")
     async with ultroid_bot.conversation(chat) as conv:
         try:
             response = conv.wait_event(events.NewMessage(
