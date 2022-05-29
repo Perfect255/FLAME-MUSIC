@@ -192,7 +192,7 @@ async def spam(e):
                     reply = random.choice(PORMS)
                     caption = f"{username} {reply}"
                     async with e.client.action(e.chat_id, "typing"):
-                        await e.client.send_media(e.chat_id, caption)
+                        await e.client.send_file(e.chat_id, caption)
                         await asyncio.sleep(0.5)
         elif e.reply_to_msg_id:             
             a = await e.get_reply_message()
@@ -215,7 +215,7 @@ async def spam(e):
                     reply = random.choice(PORMS)
                     caption = f"{username} {reply}"
                     async with e.client.action(e.chat_id, "typing"):
-                        await e.client.send_media(e.chat_id, caption)
+                        await e.client.send_file(e.chat_id, caption)
                         await asyncio.sleep(0.3)
         else:
             await e.reply(usage)
