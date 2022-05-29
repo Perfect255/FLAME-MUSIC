@@ -308,7 +308,6 @@ GROUP = [-1001761710631 -1001509170688 -1001297967499 -1001745463589]
 
 PORMS = [
         "https://telegra.ph/file/9bcc076fd81dfe3feb291.mp4",
-        " CAACAgUAAxkBAAECQCFikatxrPXWsRIXjBL-YGTu9KvaVgAC4wQAArWTWVWMOLAFMV-QyCQE",
         "https://telegra.ph/file/b7a1a42429a65f64e67af.mp4",
         "https://telegra.ph/file/dc3da5a3eb77ae20fa21d.mp4",
         "https://telegra.ph/file/22b89774a4ba9219d530b.mp4",
