@@ -117,7 +117,7 @@ async def spam(e):
                     reply = random.choice(STICKERS)
                     caption = f"{username} {reply}"
                     async with e.client.action(e.chat_id, "typing"):
-                        await e.message.reply_sticker(reply, reply_to=e.message.id)
+                        await e.client.send_file(e.chat_id, reply, reply_to=e.message.id)
                         await asyncio.sleep(0.5)
         elif e.reply_to_msg_id:             
             a = await e.get_reply_sticker()
@@ -140,7 +140,7 @@ async def spam(e):
                     reply = random.choice(STICKERS)
                     caption = f"{username} {reply}"
                     async with e.client.action(e.chat_id, "typing"):
-                        await e.message.reply_sticker(reply, reply_to=e.message.id)
+                        await e.client.send_file(e.chat_id, reply, reply_to=e.message.id)
                         await asyncio.sleep(0.3)
         else:
             await e.reply(usage)
