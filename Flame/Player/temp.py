@@ -9,9 +9,10 @@ from telethon import events
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 import asyncio
 from Flame.main import BOT
+que = {}
+hl = '/'
 
-
-@BOT(pattern="tempmail$")
+@BOT.on(events.NewMessage(incoming=True, pattern=r"\%stempmail(?: |$)(.*)" % hl))
 async def demn(flm):
     chat = "@TempMailBot"
     msg = await eor(flm, "Generating Temporary Mail...")
