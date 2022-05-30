@@ -3,6 +3,11 @@ from telethon.errors.rpcerrorlist import YouBlockedUserError
 import asyncio
 from Flame.main import BOT
 import random
+from telethon import events
+from telethon import functions, types
+que = {}
+hl = '/'
+
 love = ['''
 █▀███▀▀███▀▀███▀▀███▀▀███▀█
 █▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒█
@@ -380,8 +385,7 @@ _/)______./¯"""/') ___/)___/)__,-----------’)_• ___/)_/)__./¯/)/)
 ░░░░░░░░░░░░░░░░░▄░░░░░░░░░░░░░░░░░░
 '''
 ]
-@BOT(pattern="iloveu")
+@BOT.on(events.NewMessage(incoming=True, pattern=r"\%sloveu(?: |$)(.*)" % hl))
 async def lub(flm):
-  l = random.choice(love)
-  return await eor(flm, l)
-
+   l = random.choice(love)
+   return await eor(flm, l)
