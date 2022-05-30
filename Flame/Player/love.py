@@ -1,3 +1,4 @@
+from Flame.main import BOT
 import random
 love = ['''
 █▀███▀▀███▀▀███▀▀███▀▀███▀█
