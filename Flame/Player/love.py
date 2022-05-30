@@ -1,3 +1,6 @@
+from telethon import events
+from telethon.errors.rpcerrorlist import YouBlockedUserError
+import asyncio
 from Flame.main import BOT
 import random
 love = ['''
