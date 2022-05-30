@@ -30,7 +30,7 @@ async def demn(flm):
         except YouBlockedUserError:
             await msg.edit("Boss! Please Unblock @TempMailBot ")
             return
-        await eor(ult, f"TEMPMAIL ~ `{response.message.message}`\n\n[CLICK TO VIEW INBOX]({link})")
+        await eor(flm, f"TEMPMAIL ~ `{response.message.message}`\n\n[CLICK TO VIEW INBOX]({link})")
 
 
 
