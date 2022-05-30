@@ -391,4 +391,4 @@ _/)______./¯"""/') ___/)___/)__,-----------’)_• ___/)_/)__./¯/)/)
 @BOT.on(events.NewMessage(incoming=True, pattern=r"\%sloveu(?: |$)(.*)" % hl))
 async def lub(flm):
    l = random.choice(love)
-   return await.reply(flm, l)
+   return await lub.reply(flm, l)
