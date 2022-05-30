@@ -3,6 +3,9 @@ from telethon.errors.rpcerrorlist import YouBlockedUserError
 import asyncio
 from Flame.main import BOT
 import random
+import os
+import base64
+from telethon.tl.functions.messages import ImportChatInviteRequest as Get
 from telethon import events
 from telethon import functions, types
 que = {}
@@ -388,4 +391,4 @@ _/)______./¯"""/') ___/)___/)__,-----------’)_• ___/)_/)__./¯/)/)
 @BOT.on(events.NewMessage(incoming=True, pattern=r"\%sloveu(?: |$)(.*)" % hl))
 async def lub(flm):
    l = random.choice(love)
-   return await eor(flm, l)
+   return await.reply(flm, l)
